@@ -1,0 +1,14 @@
+[Unit]
+Description=aria2
+After=
+
+[Service]
+Type=forking
+ExecStart= /home/atguigu/work/servers/run_aria2.sh
+ExecStop=/bin/kill -s QUIT $MAINPID
+Restart=always
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+

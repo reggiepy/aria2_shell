@@ -1,0 +1,12 @@
+[Unit]
+Description=aria2
+After=network.target
+
+
+[Service]
+ExecStart=bash /home/atguigu/work/servers/run_aria2.sh
+ExecStop=bash /home/atguigu/work/servers/stop_aria2.sh
+
+
+[Install]
+WantedBy=multi-user.target

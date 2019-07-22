@@ -4,7 +4,7 @@ After=
 
 [Service]
 Type=forking
-ExecStart= /home/ubuntu/worker/aria2/run_aria2.sh
+ExecStart= template/run_aria2.sh
 ExecStop=/bin/kill -s QUIT $MAINPID
 Restart=always
 PrivateTmp=true
